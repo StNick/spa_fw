@@ -1,0 +1,23 @@
+{
+  "name": "spa_fw",
+  "version": "1.0.0",
+  "description": "SPA Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StNick/spa_fw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StNick/spa_fw/issues"
+  },
+  "homepage": "https://github.com/StNick/spa_fw#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.30"
+  }
+}

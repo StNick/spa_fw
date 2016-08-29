@@ -1,0 +1,23 @@
+{
+  "name": "spa_fw",
+  "homepage": "https://github.com/StNick/spa_fw",
+  "authors": [
+    "Nick Soper <nicksoper@gmail.com>"
+  ],
+  "description": "SPA Framework",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.5.8",
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -2,9 +2,11 @@
 
 angular.module("myFramework").directive("myFramework", function(){
     return {
-        transclude: true,
+        transclude: false,
         scope: {
-
+            title: '@',
+            subtitle: '@',
+            iconFile: '@'
         },
         controller: "myFrameworkController", 
         templateUrl: "ext-modules/myFramework/myFrameworkTemplate.html"

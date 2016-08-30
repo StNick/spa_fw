@@ -1,9 +1,13 @@
 <!doctype html>
 <html ng-app="app">
 <head>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+    <title>Whitewater Adventures</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app/app.css"/>
+    <link rel="stylesheet" type="text/css" href="ext-modules/myFramework/myFramework.css"/>
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
@@ -19,6 +23,10 @@
 
 </head>
 <body class="container-fluid">
-    <my-framework></my-framework>
+    <my-framework   title="Whitewater Adventures"
+                    subtitle="Administrative Application"
+                    icon-file="images/photo_2015-06-05_12-52-32.jpg">
+        
+    </my-framework>
 </body>
 </html>

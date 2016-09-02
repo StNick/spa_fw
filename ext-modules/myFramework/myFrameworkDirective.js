@@ -2,7 +2,7 @@
 
 angular.module("myFramework").directive("myFramework", function(){
     return {
-        transclude: false,
+        transclude: true,
         scope: {
             title: '@',
             subtitle: '@',

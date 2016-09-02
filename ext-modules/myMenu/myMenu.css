@@ -1,0 +1,55 @@
+.my-menu-area {
+    position: relative;
+    background-color: #333;
+    color: #ccc;
+    padding-left: 0;
+    width: 200px;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+.my-menu-area ul {
+    padding-left: 0;
+}
+
+.my-menu-area .btn:hover {
+    color: #ccc;
+}
+
+.my-menu {
+    list-style-type: none;
+    vertical-aligh: top;
+}
+
+.my-menu ul {
+    display: inline;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.my-menu li {
+    line-height: 3em;
+    cursor: pointer;
+}
+
+.my-menu li div {
+    display: inline-block;
+    width: 90%;
+    padding-left: 16px;
+}
+
+.my-selectable-item:hover {
+    background-color: #555;
+}
+
+.my-noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my-menu-icon {
+    margin-right: 10px;
+}

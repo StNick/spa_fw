@@ -10,7 +10,7 @@
 }
 
 .my-logo-area {
-    text-align: center;
+    // text-align: center;
 }
 
 .my-icon {
@@ -33,6 +33,16 @@
     margin-top: -13px;
 }
 
+@media screen and (max-width: 430px) {
+    .my-icon {
+        display: none;
+    }
+
+    .my-logo-title {
+        font-size: 18px;
+    }
+}
+
 .my-right-side-controls {
     line-height: 60px;
 }
@@ -49,4 +59,19 @@
     .my-right-side-controls > div {
         text-align: right;
     }    
+}
+
+.my-collapsed-menu {
+    display: inline-block;
+    height: 100%;
+}
+
+.my-nav-button {
+    height: 40px;
+    width: 60px;
+    margin-top: 10px;
+    border: 1px solid #888;
+    padding: 0;
+    font-size: 26px;
+    color: #777
 }

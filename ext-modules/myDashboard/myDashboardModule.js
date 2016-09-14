@@ -1,3 +1,3 @@
 "use strict";
 
-angular.module("myDashboard", []);
+angular.module("myDashboard", ["gridster"]);

@@ -28,4 +28,6 @@
 </div>
 <div ng-transclude></div>
 
-<div>{{routeString}}</div>
+<div ng-view class="my-view" ng-class="{'my-view-full-width': !isMenuVertical || !isMenuVisible}">
+    
+</div>

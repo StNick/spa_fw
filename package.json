@@ -19,5 +19,8 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-live-server": "0.0.30"
+  },
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.1.4"
   }
 }

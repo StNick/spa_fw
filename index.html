@@ -24,6 +24,7 @@
     <script type="text/javascript" src="bower_components/angular-gridster/dist/angular-gridster.min.js"></script>
     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     <!-- <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script> -->
+    <script type="text/javascript" src="bower_components/ngstorage/ngStorage.min.js"></script>
 
     <script type="text/javascript" src="ext-modules/myMenu/myMenuModule.js"></script>
     <script type="text/javascript" src="ext-modules/myMenu/myMenuDirective.js"></script>
@@ -38,9 +39,12 @@
     <script type="text/javascript" src="ext-modules/myFramework/myFrameworkModule.js"></script>
     <script type="text/javascript" src="ext-modules/myFramework/myFrameworkDirective.js"></script>
     <script type="text/javascript" src="ext-modules/myFramework/myFrameworkController.js"></script>
+    <script type="text/javascript" src="ext-modules/myFramework/myUserProfile/myUserProfileSmallDirective.js"></script>
+    <script type="text/javascript" src="ext-modules/myFramework/myUserProfile/myUserProfileDirective.js"></script>
     
     <script type="text/javascript" src="app/appModule.js"></script>
     <script type="text/javascript" src="app/appConfig.js"></script>
+    <script type="text/javascript" src="app/appController.js"></script>
     <script type="text/javascript" src="app/appRouteConfig.js"></script>
     <script type="text/javascript" src="app/services/dataService.js"></script>
     <script type="text/javascript" src="app/directives/wwaDashboardDirective.js"></script>
@@ -56,22 +60,42 @@
     
 
 </head>
-<body class="container-fluid">
-    <my-framework   title="Whitewater Adventures"
-                    subtitle="Administrative Application"
-                    icon-file="images/photo_2015-06-05_12-52-32.jpg">
-        
-        <my-menu>
-            <my-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></my-menu-item>
-            <my-menu-item label="Locations" icon="fa-location-arrow" route="locations"></my-menu-item>
-            <my-menu-item label="Raft Guides" icon="fa-user" route="guides"></my-menu-item>
-            <my-menu-group label="Equipment" icon="fa-gears">
-                <my-menu-item label="Rafts" icon="fa-unlink" route="rafts"></my-menu-item>
-                <my-menu-item label="Paddles" icon="fa-magic" route="paddles"></my-menu-item>
-                <my-menu-item label="Life Vests" icon="fa-life-ring" route="vests"></my-menu-item>
-            </my-menu-group>
-        </my-menu>
-        
-    </my-framework>
+<body class="container-fluid" ng-controller="appController">
+    <div ng-switch="state">
+        <div ng-switch-when="unauthorized" class="sign-in-form">
+            <h2>Whitewater Adventures Admin App</h2>
+            <h4>Sign In</h4>
+            <form>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control"/>
+                </div>
+            </form>
+            <button class="btn btn-default" ng-click="signIn()">Sign In</button>
+        </div>
+        <div ng-switch-default>
+            <my-framework   title="Whitewater Adventures"
+                            subtitle="Administrative Application"
+                            icon-file="images/photo_2015-06-05_12-52-32.jpg">
+                
+                <my-menu>
+                    <my-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></my-menu-item>
+                    <my-menu-item label="Locations" icon="fa-location-arrow" route="locations"></my-menu-item>
+                    <my-menu-item label="Raft Guides" icon="fa-user" route="guides"></my-menu-item>
+                    <my-menu-group label="Equipment" icon="fa-gears">
+                        <my-menu-item label="Rafts" icon="fa-unlink" route="rafts"></my-menu-item>
+                        <my-menu-item label="Paddles" icon="fa-magic" route="paddles"></my-menu-item>
+                        <my-menu-item label="Life Vests" icon="fa-life-ring" route="vests"></my-menu-item>
+                    </my-menu-group>
+                </my-menu>
+                
+            </my-framework>
+        </div>
+    </div>
+            
 </body>
 </html>

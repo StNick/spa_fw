@@ -119,12 +119,17 @@ angular.module('app').factory('dataService',
     };
 
     var getLocation = function (id) {
-        return $timeout(function () {
+        var timeout =  $timeout(function () {
+            // Fake an error
+            // $timeout.cancel(timeout);
+            // return undefined;
             for (var i = 0; i < locations.length; i++)
                 if (locations[i].id == id)
                     return locations[i];
             return undefined;
-        }, 300);
+        }, 2000);
+
+        return timeout;
     };
 
     var getEmployees = function () {

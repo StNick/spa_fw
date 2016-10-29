@@ -87,3 +87,48 @@
 .my-view-full-width {
     margin-left: 0;
 }
+
+.my-user-profile {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    min-height: 120px;
+    padding-top: 10px;
+}
+
+.my-user-profile > div {
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 5px;
+}
+
+.my-user-profile > div > p {
+    margin-bottom: 2px;
+}
+
+.my-user-profile > div > button {
+    margin-top: 8px;
+}
+
+.my-user-profile img {
+    float: left;
+    margin: 12px;
+    width: 80px;
+    height: 80px;
+}
+
+.my-user-profile-small {
+    color: #333;
+    padding-top: 4px;
+}
+
+.my-user-profile-small > span {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.my-user-profile-small img {
+    width: 40px;
+    height: 40px;
+}

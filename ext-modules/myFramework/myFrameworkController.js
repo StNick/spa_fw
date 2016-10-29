@@ -17,6 +17,9 @@ angular.module("myFramework").controller("myFrameworkController",
 
             $scope.$on('my-menu-orientation-changed-event', function(evt, data){
                 $scope.isMenuVertical = data.isMenuVertical;
+                $timeout(function(){
+                    $($window).trigger('resize');
+                }, 0)
             })
 
             $($window).on('resize.myFramework', function(){
@@ -39,7 +42,6 @@ angular.module("myFramework").controller("myFrameworkController",
             $scope.menuButtonClicked = function(){
                 $scope.isMenuVisible = !$scope.isMenuVisible;
                 broadcastMenuState();
-                $scope.$apply();
             }
 
             var broadcastMenuState = function(){
